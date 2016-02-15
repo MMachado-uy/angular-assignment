@@ -11,11 +11,16 @@
             </div>
         </div>
 
-        <form class="form-inline col-sm-6 creating-form">
+        <form novalidate 
+              name="createForm" 
+              class="form-inline col-sm-6 creating-form" 
+              ng-submit=submit()>
+
             <div class="form-group">
                 <label for="Name">Name</label>
                 <input type="text" 
                        class="form-control" 
+                       ng-model="name"
                        id="Name" 
                        placeholder="Here goes the Name...">
             </div>
@@ -23,19 +28,12 @@
                 <label for="LastName">Last Name</label>
                 <input type="text" 
                        class="form-control" 
+                       ng-model="lastname"
                        id="LastName" 
                        placeholder="And the Last Name here">
             </div>
-            <button type="submit" class="btn btn-default">Create it!</button>
+            <button type="submit" id="createBtn" class="btn btn-default">Create it!</button>
         </form>
     </div>
-
-
-    <!-- 
-    *
-    * Here goes the Create
-    * 
-     -->
-
 
 </section>

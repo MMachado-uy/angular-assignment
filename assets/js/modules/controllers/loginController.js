@@ -3,36 +3,19 @@ angular.module('Controllers')
                                         function ($scope, Helper, $location) {
 
         $scope.submit = function() {
-            // Visualforce.remoting.Manager.invokeAction(
-            //     '{!$RemoteAction.authController.userLogin}',
-            //     [$scope.username,
-            //     $scope.password],
-            //     function(result,event) {
 
-            //     },
-            //     {escape: true}
-            // );
-
-            // alert($scope.username);
-            //$token =  CallApexLoginMethod($scope.username, $scope.password);
-            alert('Click' +
-                '\n' +
-                'Username: ' + 
-                $scope.username +
-                '\n' +
-                'Password: ' +
-                $scope.password);
-
-            // this.clientId = $token;
-
-
-            // if (authController.userLogin($scope.username, $scope.password)) {
-            //     $("nav").show();
-            //     $location.path('/home');
-            // } else {
-            //     alert('You sure those are your credentials?');
-            //     $scope.username = null;
-            //     $scope.password = null;
-            // };
+            authController.userLogin($scope.username, $scope.password, function(result, event) {
+                if (event.status && result != null) {
+                    $("nav").show();
+                    $location.path('/home');
+                    currUser = $scope.username;
+                    currToken = result;
+                    document.getElementById("user-menu").innerHTML = currUser;
+                } else {
+                    $scope.username = null;
+                    $scope.password = null;
+                    alert('You sure those are your credentials?');
+                };
+            });
         };
     }]);

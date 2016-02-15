@@ -1,13 +1,11 @@
 <section id="login" bindonce="some.model.object">
     <div class="container row">
         <div class="col-sm-6 push-sm-3 text-center">
-            <h1>
-                Ammmm... Who are you?
-            </h1>
+            <h1>Ammmm... Who are you?</h1>
         </div>
     </div>
     <div class="container row">
-        <form novalidate class="form-inline col-sm-6 login-form" ng-submit=submit()>
+        <form novalidate name="loginForm" class="form-inline col-sm-6 login-form" ng-submit=submit()>   
             <div class="form-group">
                 <label for="Username">Username</label>
                 <input type="text" 
@@ -24,7 +22,11 @@
                        id="password" 
                        placeholder="••••••••••••">
             </div>
-            <button id="login-btn" type="submit" class="btn btn-default">Log in!</button>
+            <button id="login-btn" 
+                    type="submit" 
+                    class="btn btn-default pull-right">
+                      Log in!
+            </button>
         </form>
     </div>
 

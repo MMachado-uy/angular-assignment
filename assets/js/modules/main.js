@@ -13,14 +13,25 @@ require('../../styles/bootstrap/dist/js/bootstrap.min.js');
 
 $ = jQuery.noConflict();
 $(document).ready(function() {
+
+    var currUser;
+    var currToken;
     $("nav").hide();
 
     /*
      * Navigation
      */
-    $("nav li").click(function (e) {
-        // alert("click!");
-        $("nav li").removeClass("active");
+    $("nav .menu-item").click(function (e) {
+        $("nav .menu-item").removeClass("active");
         $(this).addClass("active");
+    });
+
+    /*
+     * Logout
+     */
+    $("#logout").click(function (e) {
+        currToken = null;
+        currUser = null;
+        $("nav").hide();
     });
 });

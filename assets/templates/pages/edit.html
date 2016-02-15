@@ -11,13 +11,14 @@
             </div>
         </div>
 
-        <form class="form-inline col-sm-6 editing-form">
+        <form novalidate class="form-inline col-sm-6 editing-form" ng-submit=submit()>
             <div class="row text-center">
             <div class="form-group">
                 <label for="Id">Id</label>
                 <input type="text" 
                        class="form-control" 
-                       id="Id" 
+                       id="id" 
+                       ng-model="id"
                        placeholder="The Id goes here, please">
             </div>
             </div>
@@ -25,14 +26,16 @@
                 <label for="Name">Name</label>
                 <input type="text" 
                        class="form-control" 
-                       id="Name" 
+                       id="name" 
+                       ng-model="name"
                        placeholder="Here goes the Name...">
             </div>
             <div class="form-group">
                 <label for="LastName">Last Name</label>
                 <input type="text" 
                        class="form-control" 
-                       id="LastName" 
+                       id="lastName" 
+                       ng-model="lastname"
                        placeholder="And the Last Name here">
             </div>
             <button type="submit" class="btn btn-default">Change it!</button>
