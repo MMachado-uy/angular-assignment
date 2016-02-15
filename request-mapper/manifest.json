@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+
+    "name": "Request Mapper",
+    "description": "Request Mapper is a Google Chrome extension for mapping web requests using regualar expresions.",
+    "version": "1.0",
+
+    "permissions": [
+        "experimental",
+        "http://*/*",
+        "https://*/*",
+        "file://*/*",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+
+    "background": {
+        "scripts": ["js/background-script.js"]
+    },
+
+    "options_page": "html/options.html"
+}

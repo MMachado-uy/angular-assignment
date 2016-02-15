@@ -1,0 +1,23 @@
+h1 {
+    margin-bottom: 1em;
+}
+
+form {
+    margin: 1em 0;
+}
+
+legend {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+ 
+    line-height: 1;
+}
+
+.controls-row {
+    padding: 3em 0;
+    border-bottom: 1px dotted #CCC;
+}
+
+.controls-row .btn-group {
+    margin-left: 0;
+}
