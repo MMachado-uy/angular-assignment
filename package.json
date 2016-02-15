@@ -1,0 +1,25 @@
+{
+  "name": "yourApp",
+  "version": "0.0.1",
+  "description": "yourApp",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Wont tell you",
+  "license": "BSD",
+  "gitHead": "96983be4e1282e3a297eb146c2b0d7fe0596b566",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "browserify": "~2.35.0",
+    "express": "~3.3.5",
+    "grunt": "~0.4.1",
+    "grunt-angular-templates": "~0.3.2",
+    "grunt-browserify": "~1.2.11",
+    "grunt-contrib-watch": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-exec": "~0.4.2"
+  }
+}
