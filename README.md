@@ -26,8 +26,7 @@ The following RegEx / URL pairs can be used in the options page of the extension
 
 RegEx | URL
 --- | ---
-`.*\/resource\/.*/your_assets\/js/modules/ ` | https://localhost/js/modules/
-`.*\/resource\/.*/your_assets\/js/build/ ` | https://localhost/js/build/
+`.*\/resource\/.*\/your_assets\/js/` | https://localhost/js/
 `.*\/resource\/.*\/your_assets\/styles/` | https://localhost/styles/
 `.*\/resource\/.*\/your_assets\/templates/` | https://localhost/templates/
 

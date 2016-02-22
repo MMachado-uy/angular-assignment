@@ -1,12 +1,20 @@
 angular.module('Controllers')
     .controller('HomeController', ['$scope', 'Helper',function ($scope, Helper) {
 
-        $scope.contacts = [];
 
-        ContactCRUDController.listUsers(currUser, currToken, function(result, event) {
-            if (event.status && result != null) {
-                $scope.contacts = JSON.stringify(result);
-                console.log($scope.contacts);
-            }
-        });        
+        Helper.get().success(function(data){
+            var call = data;
+        });
+
+        console.log(call);
+
+
+        //$scope.contacts = [{"Id":"003610000067Ag4AAE","FirstName":"John","LastName":"Downes"},{"Id":"003610000067Ag5AAE","FirstName":"Xavier","LastName":"Birch"},{"Id":"003610000067Ag6AAE","FirstName":"Basil","LastName":"Wenceslas"},{"Id":"003610000067Ag7AAE","FirstName":"Alice","LastName":"Black"},{"Id":"003610000067AfoAAE","FirstName":"John","LastName":"Dodge"},{"Id":"003610000067AfqAAE","FirstName":"George","LastName":"Dapper"},{"Id":"003610000067AfrAAE","FirstName":"Jack","LastName":"Dodge"},{"Id":"003610000067AfsAAE","FirstName":"Jessica","LastName":"Jones"},{"Id":"003610000067AftAAE","FirstName":"Dragon","LastName":"Davich"},{"Id":"003610000067AfuAAE","FirstName":"Steve","LastName":"Curio"},{"Id":"003610000067AfvAAE","FirstName":"Laura","LastName":"Black"},{"Id":"003610000067AfwAAE","FirstName":"Wilhelm","LastName":"Blake"},{"Id":"003610000067AfxAAE","FirstName":"Winter","LastName":"Drake"},{"Id":"003610000067AfyAAE","FirstName":"Sal","LastName":"Sands"},{"Id":"003610000067AfzAAE","FirstName":"Julia","LastName":"Wilds"},{"Id":"003610000067Ag0AAE","FirstName":"Juniper","LastName":"Birsch"},{"Id":"003610000067Ag1AAE","FirstName":"Valerie","LastName":"Duncan"},{"Id":"003610000067Ag2AAE","FirstName":"Patti","LastName":"Patel"},{"Id":"003610000067Ag3AAE","FirstName":"Justin","LastName":"Short"},{"Id":"0036100000NBQkQAAX","FirstName":"Xander","LastName":"Example"},{"Id":"00361000006Lr7TAAS","FirstName":"Rose","LastName":"Gonzalez"},{"Id":"00361000006Lr7gAAC","FirstName":"Ashley","LastName":"James"},{"Id":"00361000006Lr7hAAC","FirstName":"Tom","LastName":"Ripley"},{"Id":"00361000006Lr7iAAC","FirstName":"Liz","LastName":"D&#39;Cruz"},{"Id":"00361000006Lr7jAAC","FirstName":"Edna","LastName":"Frank"},{"Id":"00361000006Lr7kAAC","FirstName":"Avi","LastName":"Green"},{"Id":"00361000006Lr7lAAC","FirstName":"Siddartha","LastName":"Nedaerk"},{"Id":"00361000006Lr7mAAC","FirstName":"Jake","LastName":"Llorrac"},{"Id":"00361000006Lr7UAAS","FirstName":"Sean","LastName":"Forbes"},{"Id":"00361000006Lr7VAAS","FirstName":"Jack","LastName":"Rogers"},{"Id":"00361000006Lr7WAAS","FirstName":"Pat","LastName":"Stumuller"},{"Id":"00361000006Lr7XAAS","FirstName":"Andy","LastName":"Young"},{"Id":"00361000006Lr7YAAS","FirstName":"Tim","LastName":"Barr"},{"Id":"00361000006Lr7ZAAS","FirstName":"John","LastName":"Bond"},{"Id":"00361000006Lr7aAAC","FirstName":"Stella","LastName":"Pavlova"},{"Id":"00361000006Lr7bAAC","FirstName":"Lauren","LastName":"Boyle"},{"Id":"00361000006Lr7cAAC","FirstName":"Babara","LastName":"Levy"},{"Id":"00361000006Lr7dAAC","FirstName":"Josh","LastName":"Davis"},{"Id":"00361000006Lr7eAAC","FirstName":"Jane","LastName":"Grey"},{"Id":"00361000006Lr7fAAC","FirstName":"Arthur","LastName":"Song"},{"Id":"003610000067ZkzAAE","FirstName":"Joe","LastName":"Smith"},{"Id":"003610000067Zl0AAE","FirstName":"Kathy","LastName":"Smith"},{"Id":"003610000067Zl1AAE","FirstName":"Caroline","LastName":"Roth"},{"Id":"003610000067ZkcAAE","FirstName":"Josh","LastName":"Kaplan"},{"Id":"003610000067ZkdAAE","FirstName":"Kathy","LastName":"Brown"},{"Id":"003610000067ZUZAA2","FirstName":"Josh","LastName":"Kaplan"},{"Id":"003610000067ZUaAAM","FirstName":"Kathy","LastName":"Brown"},{"Id":"003610000067ZkPAAU","FirstName":"Caroline","LastName":"Roth"},{"Id":"003610000067ZkQAAU","FirstName":"Kim","LastName":"Shain"},{"Id":"003610000067ZQ5AAM","FirstName":"Caroline","LastName":"Roth"},{"Id":"003610000067ZQ6AAM","FirstName":"Kim","LastName":"Shain"},{"Id":"003610000067a1iAAA","FirstName":"Carol","LastName":"Ruiz"},{"Id":"003610000067aOSAAY","FirstName":"Carol","LastName":"Ruiz"},{"Id":"0036100000JskEeAAJ","FirstName":"Mauricio","LastName":"Machado"},{"Id":"0036100000ONhHAAA1","FirstName":"Test","LastName":"20160202"}];
+
+        // ContactCRUDController.listUsers(currUser, currToken, function(result, event) {
+        //     if (event.status && result != null) {
+        //         $scope.contacts = JSON.stringify(result);
+        //         console.log('Hello World');
+        //     }
+        // });
     }]);

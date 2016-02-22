@@ -239,7 +239,11 @@ angular.module("YourApp").run(["$templateCache", function($templateCache) {
     "\n" +
     "    <div class=\"container row\">\r" +
     "\n" +
-    "        <form novalidate name=\"loginForm\" class=\"form-inline col-sm-6 login-form\" ng-submit=submit()>   \r" +
+    "        <form novalidate name=\"loginForm\" \r" +
+    "\n" +
+    "                         class=\"form-inline col-sm-6 login-form\" \r" +
+    "\n" +
+    "                         ng-submit=\"loginForm.$valid && submit()\">   \r" +
     "\n" +
     "            <div class=\"form-group\">\r" +
     "\n" +
@@ -249,11 +253,13 @@ angular.module("YourApp").run(["$templateCache", function($templateCache) {
     "\n" +
     "                       class=\"form-control\"\r" +
     "\n" +
-    "                       ng-model=\"username\" \r" +
+    "                       ng-model=\"username\"\r" +
     "\n" +
     "                       id=\"username\" \r" +
     "\n" +
-    "                       placeholder=\"Your username, please\">\r" +
+    "                       placeholder=\"Your username, please\"\r" +
+    "\n" +
+    "                       required>\r" +
     "\n" +
     "            </div>\r" +
     "\n" +
@@ -269,9 +275,13 @@ angular.module("YourApp").run(["$templateCache", function($templateCache) {
     "\n" +
     "                       id=\"password\" \r" +
     "\n" +
-    "                       placeholder=\"••••••••••••\">\r" +
+    "                       placeholder=\"••••••••••••\"\r" +
+    "\n" +
+    "                       required>\r" +
     "\n" +
     "            </div>\r" +
+    "\n" +
+    "            <div> loginForm is {{loginForm.$valid}} </div>\r" +
     "\n" +
     "            <button id=\"login-btn\" \r" +
     "\n" +
